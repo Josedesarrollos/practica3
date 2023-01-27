@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const Usuario = require(__dirname + '/../models/usuario');
-mongoose.connect('mongodb://127.0.0.1:27017/juegosPractica3');
+mongoose.connect('mongodb://127.0.0.1:27017/juegosPractica31');
 
 //usuario 1:
 

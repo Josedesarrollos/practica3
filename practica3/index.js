@@ -6,13 +6,17 @@ const nunjucks = require('nunjucks');
 const session=require('express-session');
 const methodOverride=require('method-override');
 
+
+//iniciamos los usuarios
+const cargarUsuarios=require(__dirname+"/utils/generarUsuarios");
+
 //importamos el directorio de rutas
 const juegos = require(__dirname + '/routes/juegos');
 const usuarios=require(__dirname + '/routes/usuarios');
 const publico=require(__dirname + '/routes/publico');
 
 //conectamos a la base de datos
-mongoose.connect('mongodb://localhost:27017/juegosPractica3')
+
 //iniciamos express
 let app=express();
 
@@ -74,4 +78,4 @@ app.use('/usuarios',usuarios);
 app.use('/juegos',juegos);
 app.use('/', publico);
 
-app.listen(8080);
+app.listen(8082);
